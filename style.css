@@ -9,43 +9,14 @@
 body {
     margin: 0;
     padding: 0;
-    width: 100%;
 }
-
-.nav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: #1f1633;
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
-}
-
-ul li a {
-    display: block;
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-family: 'Inter', sans-serif;
-}
-
-ul li a:hover {
-    background-color: #6a5fc1;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
 .navbar {
     position: sticky;
     top: 0;
     z-index: 1000;
     background: #1f1633;
-   
     height: 64px;
 }
-
 .nav-container {
     max-width: 1320px;
     height: 100%;
@@ -55,14 +26,12 @@ ul li a:hover {
     align-items: center;
     justify-content: space-between;
 }
-
 .nav-left {
     display: flex;
     align-items: center;
     gap: 36px;
     height: 100%;
 }
-
 .nav-logo {
     display: flex;
     align-items: center;
@@ -103,13 +72,7 @@ ul li a:hover {
     align-items: center;
     gap: 5px;
     text-decoration: none;
-
 }
-
-
-
-
-
 
 .mega-menu {
     position: absolute;
@@ -118,19 +81,15 @@ ul li a:hover {
     background: white;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+
     display: flex;
     gap: 32px;
     padding: 24px;
     color: black;
-
-
     opacity: 0;
     visibility: hidden;
     transform: translateY(8px);
-   
 }
-
 
 .mega-menu::before {
     content: "";
@@ -141,15 +100,13 @@ ul li a:hover {
     height: 12px;
 }
 
-
 .nav-item:hover .mega-menu,
 .nav-item:focus-within .mega-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
-    pointer-events: auto;
-}
 
+}
 
 .platform-menu {
     min-width: 520px;
@@ -194,7 +151,7 @@ ul li a:hover {
     font-size: 0.9rem;
     padding: 6px 8px;
     border-radius: 6px;
-   
+
 }
 
 .col-links a:hover {
@@ -207,92 +164,6 @@ ul li a:hover {
     font-weight: 500;
     margin-top: 4px;
 }
-
-
-.menu-card {
-    width: 220px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    border-radius: 8px;
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.menu-card h4 {
-    font-size: 0.95rem;
-    margin-bottom: 8px;
-}
-
-.menu-card p {
-    font-size: 0.8rem;
-    color: #9c97af;
-    line-height: 1.4;
-    margin-bottom: 16px;
-}
-
-.menu-card .card-btn {
-    font-size: 0.8rem;
-    color: #aa9cff;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-
-.badge {
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 0.4px;
-    background: #3c2463;
-    color: #c9b3ff;
-    border-radius: 4px;
-    padding: 2px 5px;
-}
-
-
-.nav-right {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.btn {
-    padding: 8px 14px;
-    font-size: 0.88rem;
-    font-weight: 600;
-    border-radius: 6px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.15s ease;
-}
-
-.btn-ghost {
-    color: #c3c0cd;
-}
-
-.btn-ghost:hover {
-    color: #fff;
-}
-
-.btn-outline {
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #fff;
-}
-
-.btn-outline:hover {
-    background: rgba(255, 255, 255, 0.08);
-}
-
-.btn-primary {
-    background: #7a5af8;
-    color: #fff;
-}
-
-.btn-primary:hover {
-    background: #6944f6;
-}
-
 
 .btn-demo {
     position: relative;
@@ -312,24 +183,16 @@ ul li a:hover {
     border: none;
     cursor: pointer;
     overflow: hidden;
-    isolation: isolate;
     transition: transform 0.2s ease;
 }
 
-/* Linear Gradient Border */
 .btn-demo::before {
     content: "";
     position: absolute;
     inset: 0;
     border-radius: 7px;
     padding: 2.5px;
-
-    background: var(--border-gradient);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask-composite: exclude;
-    pointer-events: none;
+    background: transparent;
     z-index: 1;
     transition: opacity 0.35s ease;
 }
@@ -350,13 +213,6 @@ ul li a:hover {
     z-index: 2;
 }
 
-.btn-demo:hover::after {
-    opacity: 1;
-}
-
-.btn-demo:active {
-    transform: scale(0.98);
-}
 
 .btn-started {
     position: relative;
@@ -377,10 +233,8 @@ ul li a:hover {
     border: none;
     cursor: pointer;
     overflow: hidden;
-    isolation: isolate;
     transition: transform 0.2s ease;
 }
-
 
 .btn-started::after {
     content: "";
@@ -410,10 +264,7 @@ ul li a:hover {
 .main-container {
     background-image: url("images/welcome-bg.png");
     background-repeat: repeat-y;
-
-
     background-size: 2732px 1366px;
-
 }
 
 .purple-btn {
@@ -436,7 +287,6 @@ ul li a:hover {
     margin-bottom: 2rem;
     text-align: center;
     vertical-align: center;
-
 }
 
 .contenttext {
@@ -449,7 +299,6 @@ ul li a:hover {
     font-size: 90px;
     color: white;
     font-weight: 700;
-
     text-align: center;
 }
 
@@ -472,15 +321,11 @@ ul li a:hover {
 .subtext {
     color: white;
     font-size: 40px;
-    color: white;
     font-weight: 700;
-
     text-align: center;
-
 }
 
 .buttons-element {
-    align-items: center;
     text-align: center;
 }
 
@@ -497,8 +342,6 @@ ul li a:hover {
     height: 300px;
     width: 250px;
     align-items: center;
-
-
 }
 
 .ufo-carousel {
@@ -516,15 +359,11 @@ ul li a:hover {
     width: max-content;
     animation: scroll 20s linear infinite;
     animation-direction: reverse;
-
-
 }
 
 .logo-item {
     height: 100px;
     width: 200px;
-
-
 }
 
 .buttonsmain {
@@ -543,37 +382,13 @@ ul li a:hover {
     }
 }
 
-.content-container {
-    margin-left: 200px;
-    margin-right: 200px;
-}
-
-.tabcontent {
-    margin-left: 200px;
-    margin-right: 200px;
-}
-
-.reviews-section {
-    margin-left: 200px;
-    margin-right: 200px;
-
-}
-
-.get-started {
-    margin-left: 200px;
-    margin-right: 200px;
-
-}
-
-.trustcontent {
-    margin-left: 200px;
-    margin-right: 200px;
-
-}
-
+.content-container,
+.tabcontent,
+.reviews-section,
+.get-started,
+.trustcontent,
 .newsletter {
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-inline: 200px;
 }
 
 .bottom-container {
@@ -596,34 +411,25 @@ ul li a:hover {
     position: relative;
     display: inline-block;
     border-radius: 20px;
-
     padding: 2.5px;
-
     background: linear-gradient(95deg,
             #ff2e93 0%,
             #ff617b 20%,
             #ff9933 50%,
             #ffdd33 75%,
             #b8f635 100%);
-
-
-    box-shadow: 0 0 35px rgba(255, 46, 147, 0.15),
-        0 0 50px rgba(184, 246, 53, 0.15);
 }
 
 .gradient-card .card-img {
     display: block;
     width: 500px;
     height: auto;
-    border-radius: calc(20px - 2.5px);
-
+    border-radius: 17.5px;
     background-color: #120c1f;
-
 }
 
 .card-row {
     display: flex;
-    flex-direction: row;
 }
 
 .card-head {
@@ -641,7 +447,6 @@ ul li a:hover {
     width: 100%;
 }
 
-
 .step-radio {
     display: none !important;
 }
@@ -653,7 +458,6 @@ ul li a:hover {
     justify-content: space-between;
     gap: 56px;
 }
-
 
 .sentry-left-col {
     flex: 0 0 440px;
@@ -674,7 +478,6 @@ ul li a:hover {
     gap: 32px;
 }
 
-
 .sentry-step-label {
     display: flex;
     align-items: stretch;
@@ -688,7 +491,6 @@ ul li a:hover {
 .sentry-step-label:hover {
     opacity: 0.75;
 }
-
 
 .indicator-bar {
     width: 4px;
@@ -734,16 +536,14 @@ ul li a:hover {
 #sec2-step-2:checked~.sentry-container .label-2 .indicator-bar,
 #sec2-step-3:checked~.sentry-container .label-3 .indicator-bar {
     background: linear-gradient(180deg, #ff2a9d 0%, #ff7b47 50%, #cbfb37 100%);
-    box-shadow: 0 0 12px rgba(255, 42, 157, 0.45);
-}
 
+}
 
 .sentry-right-col {
     flex: 1;
     max-width: 680px;
     width: 100%;
 }
-
 
 .image-stage {
     display: grid;
@@ -753,15 +553,12 @@ ul li a:hover {
     position: relative;
 }
 
-
 .image-panel {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     display: none;
     width: 100%;
 }
-
-
 
 #sec1-step-1:checked~.sentry-container .panel-1,
 #sec1-step-2:checked~.sentry-container .panel-2,
@@ -772,16 +569,13 @@ ul li a:hover {
     display: block;
 }
 
-
 .main-image {
     width: 100%;
     height: auto;
     display: block;
     border-radius: 14px;
     border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
 }
-
 
 @media (max-width: 960px) {
     .sentry-container {
@@ -806,7 +600,6 @@ ul li a:hover {
     margin-top: auto;
 }
 
-/* White Circle Badge for Logos */
 .author-avatar {
     width: 54px;
     height: 54px;
@@ -818,10 +611,7 @@ ul li a:hover {
     flex-shrink: 0;
     padding: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
-
-
 
 .author-info {
     display: flex;
@@ -833,8 +623,7 @@ ul li a:hover {
     font-size: 17px;
     font-weight: 700;
     color: #ffffff;
-    letter-spacing: -0.01em;
-    margin: none;
+    margin: 0;
 }
 
 .author-title {
@@ -842,12 +631,12 @@ ul li a:hover {
     line-height: 1.35;
     color: #9f96b8;
     font-weight: 400;
-    margin: none;
+    margin: 0;
 }
 
 .review-row {
     display: flex;
-    flex-direction: row;
+
 }
 
 .review-card {
@@ -868,9 +657,7 @@ ul li a:hover {
     max-width: 1240px;
     margin: 0 auto;
     padding: 40px 24px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
-
 
 .newsletter-card {
     flex: 0 0 530px;
@@ -878,7 +665,6 @@ ul li a:hover {
     background-color: #4d2393;
     border-radius: 12px;
     padding: 34px 34px 30px 34px;
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
 }
 
 .newsletter-form {
@@ -886,16 +672,13 @@ ul li a:hover {
     flex-direction: column;
 }
 
-
 .email-label {
     display: block;
     color: #ffffff;
     font-size: 13px;
     font-weight: 800;
-    letter-spacing: 0.04em;
     margin-bottom: 10px;
 }
-
 
 .email-textbox {
     width: 90%;
@@ -906,15 +689,7 @@ ul li a:hover {
     padding: 0 16px;
     font-size: 15px;
     color: #1e1338;
-    outline: none;
-    transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
-
-.email-textbox:focus {
-    border-color: #2b105a;
-    box-shadow: 0 0 0 3px rgba(35, 12, 75, 0.45);
-}
-
 
 .checkbox-container {
     display: flex;
@@ -925,7 +700,6 @@ ul li a:hover {
     user-select: none;
 }
 
-
 .custom-checkbox {
     position: absolute;
     opacity: 0;
@@ -933,7 +707,6 @@ ul li a:hover {
     height: 0;
     width: 0;
 }
-
 
 .checkbox-box {
     width: 16px;
@@ -946,31 +719,12 @@ ul li a:hover {
     transition: transform 0.15s ease;
 }
 
-
-.custom-checkbox:checked~.checkbox-box::after {
-    content: "";
-    position: absolute;
-    left: 5px;
-    top: 2px;
-    width: 4px;
-    height: 8px;
-    border: solid #4d2393;
-    /* Matching purple check */
-    border-width: 0 2.5px 2.5px 0;
-    transform: rotate(45deg);
-}
-
-.checkbox-container:hover .checkbox-box {
-    transform: scale(1.05);
-}
-
 .checkbox-label-text {
     color: #ffffff;
     font-size: 13.5px;
     line-height: 1.45;
     font-weight: 600;
 }
-
 
 .disclaimer-text {
     color: #c9bdeb;
@@ -984,7 +738,6 @@ ul li a:hover {
 .disclaimer-text a {
     color: #c9bdeb;
     text-decoration: underline;
-    text-underline-offset: 2px;
 }
 
 .disclaimer-text a:hover {
@@ -995,26 +748,12 @@ ul li a:hover {
     align-self: flex-start;
     margin-top: 20px;
     background-color: #ffffff;
-    color: #21133d;
-    /* Dark purple text */
+    cursor: pointer;
     border: none;
     border-radius: 8px;
     padding: 10px 22px;
     font-size: 13px;
     font-weight: 800;
-    letter-spacing: 0.05em;
-    cursor: pointer;
-    transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
-}
-
-.signup-btn:hover {
-    background-color: #f3edfd;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
-}
-
-.signup-btn:active {
-    transform: translateY(0);
 }
 
 .illustration-col {
@@ -1030,7 +769,6 @@ ul li a:hover {
     height: auto;
     display: block;
 }
-
 
 @media (max-width: 900px) {
     .newsletter-wrapper {
@@ -1058,7 +796,6 @@ ul li a:hover {
 
 .footer-row {
     display: flex;
-    flex-direction: row;
     margin-left: 200px;
     margin-right: 200px;
 }
@@ -1108,7 +845,6 @@ ul li a:hover {
 
 .footer-links {
     display: flex;
-    flex-direction: row;
 }
 
 .footer-links h5 {
@@ -1120,10 +856,7 @@ ul li a:hover {
 }
 
 .dropdown-app {
-    align-items: center;
     text-align: center;
-
-
 }
 
 #myDropdown {
@@ -1138,10 +871,8 @@ ul li a:hover {
 
 .code-image {
     position: relative;
-    isolation: isolate;
     width: 100%;
     height: 200px;
-    container-type: inline-size;
 }
 
 .code-image img {
@@ -1151,7 +882,6 @@ ul li a:hover {
     height: 100%;
     display: block;
 }
-
 
 .content-box {
     display: none;
@@ -1164,10 +894,8 @@ ul li a:hover {
     color: white;
     text-align: left;
     font-size: 16px;
-    overflow-wrap: anywhere;
 }
 
-/* ...then the one matching the dropdown is switched on */
 .dropdown-app:has(option[value="nextjs"]:checked) #nextjs-content,
 .dropdown-app:has(option[value="angular"]:checked) #angular-content,
 .dropdown-app:has(option[value="android"]:checked) #android-content,
@@ -1194,35 +922,9 @@ ul li a:hover {
     display: block;
 }
 
-
-
-
-
-
-
-
-
-html {
-    box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-
-
 .divider,
 .standalone-wave {
     overflow: hidden;
-    max-width: 100%;
-}
-
-
-html,
-body {
-    overflow-x: hidden;
     max-width: 100%;
 }
 
@@ -1232,7 +934,6 @@ body {
     opacity: 0;
     width: 1px;
     height: 1px;
-    pointer-events: none;
 }
 
 .hamburger-btn {
@@ -1242,8 +943,6 @@ body {
 .nav-mobile-cta {
     display: none;
 }
-
-
 
 /* --------------------------------------------------------------------
    TIER 1 — max-width: 1200px  (small laptops / large tablets landscape)
@@ -1317,7 +1016,6 @@ body {
         margin-right: 40px;
     }
 
-
     .footer-row {
         flex-wrap: wrap;
         row-gap: 32px;
@@ -1338,11 +1036,9 @@ body {
         gap: 0;
     }
 
-
     .buttons-element {
         display: none;
     }
-
 
     .hamburger-btn {
         display: flex;
@@ -1381,7 +1077,6 @@ body {
         transform: translateY(-7px) rotate(-45deg);
     }
 
-
     .nav-links {
         display: none;
         position: absolute;
@@ -1397,7 +1092,6 @@ body {
         overflow-y: auto;
         background: #1f1633;
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
         padding: 8px 16px 20px;
     }
 
@@ -1421,21 +1115,17 @@ body {
         border-radius: 0;
     }
 
-
-
     .mega-menu {
         display: none;
         position: static;
         opacity: 1;
         visibility: visible;
         transform: none;
-        pointer-events: auto;
         flex-direction: column;
         gap: 24px;
         width: 100%;
         min-width: 0;
         margin: 4px 0 12px;
-        box-shadow: none;
     }
 
     .nav-item.has-dropdown:has(.dropdown-toggle:checked) .mega-menu {
@@ -1445,7 +1135,6 @@ body {
     .mega-menu::before {
         display: none;
     }
-
 
     .nav-mobile-cta {
         display: flex;
@@ -1466,19 +1155,10 @@ body {
     .get-started,
     .trustcontent,
     .newsletter,
-    .footer-row {
-        margin-left: 40px;
-        margin-right: 40px;
-    }
-
-    .divider {
-        margin-left: 40px;
-        margin-right: 40px;
-    }
-
-    .fix-it {
-        margin-left: 40px;
-        margin-right: 40px;
+    .footer-row,
+    .divider,
+    .fix-it{
+        margin-inline: 40px;
     }
 
     .card-row {
@@ -1512,7 +1192,6 @@ body {
     }
 
     .purple-btn {
-        white-space: normal;
         text-align: center;
         max-width: 90%;
         margin: 0 auto;
@@ -1664,7 +1343,6 @@ body {
         height: 40px;
     }
 
-
     .head {
         font-size: 32px;
     }
@@ -1781,22 +1459,9 @@ body {
 
 
 
-@media (max-width: 1200px) {
-    .code-image {
-        height: auto;
-        aspect-ratio: 5.2 / 1; 
-    }
-
-    .content-box {
-        top: 37%;
-        font-size: clamp(11px, 1.54cqw, 16px);
-    }
-}
-
-
 @media (max-width: 640px) {
     .code-image {
-        aspect-ratio: 1.7 / 1;
+        aspect-ratio: 2 / 1;
     }
 
     .code-image img {
@@ -1808,19 +1473,7 @@ body {
         content: "Bash";
         position: absolute;
         z-index: 2;
-        left: clamp(12px, 4cqw, 28px);
-        top: 10cqw;
         transform: translateY(-50%);
-        font-size: clamp(10px, 2.9cqw, 13px);
         color: #b9b5c8;
-    }
-
-    .content-box {
-        position: relative;
-        left: auto;
-        right: auto;
-        top: auto;
-        padding: 17cqw clamp(12px, 4cqw, 28px) 14px;
-        font-size: clamp(11.5px, 3.6cqw, 15px);
     }
 }
